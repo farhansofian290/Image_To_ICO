@@ -12,7 +12,7 @@ int main() {
 	}
 
 	Converter c;
-	Image img = c.loadImageFile("test.png");
+	Image img = c.loadImageFile("C:\\Users\\farha\\Downloads\\test.png");
 
 	std::cout << img.width << std::endl;
 	std::cout << img.height << std::endl;
