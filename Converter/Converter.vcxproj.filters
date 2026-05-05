@@ -24,9 +24,21 @@
     <ClInclude Include="Include\Converter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\ImageHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ImageHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Converter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
