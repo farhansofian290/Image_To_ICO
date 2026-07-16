@@ -9,4 +9,5 @@ public:
 
 	static Image loadImageFile(const std::string& file);
 
+
 };

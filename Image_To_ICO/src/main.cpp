@@ -1,4 +1,5 @@
 #include "Converter.h"
+#include "Utilities.h"
 
 
 #include "pch.h"
@@ -12,11 +13,27 @@ int main() {
 	}
 
 	Converter c;
-	Image img = c.loadImageFile("C:\\Users\\farha\\Downloads\\test.png");
+	Image img = c.loadImageFile("C:\\Users\\farha\\Downloads\\test.jpg");
 
-	std::cout << img.width << std::endl;
-	std::cout << img.height << std::endl;
-	std::cout << img.pixels.size() << std::endl;
+	ICO_LOG(img.width);
+	ICO_LOG(img.height);
+	ICO_LOG(img.pixels.size());
 
 
+	ICO_LOG("===============================================================");
+
+
+	Image croped = c.crop(img, 100, 100, 100, 100);
+
+	ICO_LOG(croped.width);
+	ICO_LOG(croped.height);
+	ICO_LOG(croped.pixels.size());
+
+	ICO_LOG("===============================================================");
+
+	Image nearest = c.resize(img, 256, 256, ResizeAlgorithm::Nearest);
+
+	ICO_LOG(nearest.width);
+	ICO_LOG(nearest.height);
+	ICO_LOG(nearest.pixels.size());
 }

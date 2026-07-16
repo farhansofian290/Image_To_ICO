@@ -100,7 +100,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;CONVERTER_DEBUG=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;ICO_DEBUG==2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Converter\Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\test.h" />
+    <ClInclude Include="src\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
