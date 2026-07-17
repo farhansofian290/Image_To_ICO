@@ -2,6 +2,7 @@
 #include "Converter.h"
 #include "ImageHandler.h"
 #include "ImageProcessor.h"
+#include "ICOEncoder.h"
 
 Image Converter::loadImageFile(const std::string& file)
 {
@@ -15,4 +16,8 @@ Image Converter::crop(const Image& main, size_t startX, size_t startY, size_t xS
 
 Image Converter::resize(const Image& image, size_t newWidth, size_t newHeight, ResizeAlgorithm algo) {
     return ImageProcessor::resize(image, newWidth, newHeight, algo);
+}
+
+bool Converter::save(const Image& image, const std::string& filename) {
+    return ICOEncoder::save(image, filename);
 }

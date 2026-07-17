@@ -31,9 +31,13 @@ int main() {
 
 	ICO_LOG("===============================================================");
 
-	Image nearest = c.resize(img, 256, 256, ResizeAlgorithm::Nearest);
+	Image nearest = c.resize(croped, 256, 256, ResizeAlgorithm::Nearest);
 
 	ICO_LOG(nearest.width);
 	ICO_LOG(nearest.height);
 	ICO_LOG(nearest.pixels.size());
+
+	c.save(nearest, "test.ico");
+
+	
 }

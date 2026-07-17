@@ -128,6 +128,7 @@
     <ClInclude Include="Include\Converter.h" />
     <ClInclude Include="Include\Image.h" />
     <ClInclude Include="Include\ImageAlgorithms.h" />
+    <ClInclude Include="src\ICOEncoder.h" />
     <ClInclude Include="src\ImageHandler.h" />
     <ClInclude Include="src\ImageProcessor.h" />
     <ClInclude Include="src\pch.h" />
@@ -135,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Converter.cpp" />
+    <ClCompile Include="src\ICOEncoder.cpp" />
     <ClCompile Include="src\ImageHandler.cpp" />
     <ClCompile Include="src\ImageProcessor.cpp" />
     <ClCompile Include="src\pch.cpp" />
