@@ -79,7 +79,22 @@ bool ICOEncoder::save(const Image& image, const std::string& filename)
 
 	file.write(reinterpret_cast<const char*>(&bitmapHeader), sizeof(bitmapHeader));
 
-	file.write(reinterpret_cast<const char*>(image.pixels.data()), image.pixels.size());
+
+
+	//Flip Image Right side up. (Otherwise image is upsidedown). 
+
+	uint32_t byteWidth = image.width * 4; // Pixel Width Count * 4 bytes
+
+	for (int y = image.height - 1; y >= 0; y--) { //Start at the bottom row and work up
+
+		const uint8_t* row = image.pixels.data() + (y * byteWidth); //Get Row data
+
+		file.write(reinterpret_cast<const char*>(row), byteWidth); //Insert 
+
+	}
+
+
+	//file.write(reinterpret_cast<const char*>(image.pixels.data()), image.pixels.size());
 
 	if (!file) {
 		return false;
