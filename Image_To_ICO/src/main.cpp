@@ -31,13 +31,7 @@ int main() {
 
 	ICO_LOG("===============================================================");
 
-	Image nearest = c.resize(croped, 32, 32, ResizeAlgorithm::Nearest);
-
-	ICO_LOG(nearest.width);
-	ICO_LOG(nearest.height);
-	ICO_LOG(nearest.pixels.size());
-
-	c.save(nearest, "work32.ico");
+	c.save(croped, "workfinal.ico");
 
 	
 }
