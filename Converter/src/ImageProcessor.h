@@ -10,5 +10,6 @@ public:
 
 	static Image resize(const Image& image, size_t newWidth, size_t newHeight, ResizeAlgorithm algo);
 
+private:
 	static Image nearestNeighbor(const Image& image, size_t newWidth, size_t newHeight);
 };

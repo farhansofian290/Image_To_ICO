@@ -31,7 +31,7 @@ int main() {
 
 	ICO_LOG("===============================================================");
 
-	c.save(croped, "workfinal.ico");
+	c.save(croped, "workfinal2.ico");
 
 	
 }

@@ -48,4 +48,8 @@ class ICOEncoder {
 public:
 	static bool save(const Image& image, const std::string& filename);
 
+private:
+	static void writeDirectory(const Image& icon, ICOHeader header, std::ofstream& file, uint32_t offset);
+	static void writeBITMAPINFO(const Image& icon, std::ofstream& file);
+
 };
